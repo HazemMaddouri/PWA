@@ -85,4 +85,19 @@ self.addEventListener('push', e => {
   if(!(self.Notification && self.Notification.permission === 'granted')) {
     return
   }
+
+  console.log('test notification')
+  const data = e.data.json() ?? {}
+  //console.log(data)
+
+  const myNotification = registration.showNotification(data.title, {
+    body: data.message,
+    tag:"simple-demo-notification",
+    icon: "icons/favicon-96x96.png"
+  })
+
+  self.addEventListener('notificationclick', e => {
+    e.notification.close()
+    e.waitUntil(clients.openWindow(data.url))
+  })
 })
