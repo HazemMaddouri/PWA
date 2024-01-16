@@ -1,7 +1,7 @@
 {
   "name": "demo wf 11",
   "short_name": "Demo pwa",
-  "start_URL": "index.html",
+  "start_url": "index.html",
   "display": "fullscreen",
   "icons": [
     {
