@@ -1,0 +1,6 @@
+@media (prefers-color-scheme: dark) {
+  /* Override theme color for dark mode */
+  meta[name="theme-color"] {
+    content: #285E79;
+  }
+}
