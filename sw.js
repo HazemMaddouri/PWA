@@ -7,4 +7,5 @@ self.addEventListener('install', e => {
 
 self.addEventListener('activate', e => {
   console.log('Activate SW version :' + version);
+  return self.clients.claim()
 })
