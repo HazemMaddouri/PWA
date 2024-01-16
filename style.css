@@ -1,10 +1,8 @@
-meta[name="theme-color"] {
-  content: #B12A34;
+body {
+  background-color: lightskyblue;
+  font-family: helvetica;
 }
 
-@media (prefers-color-scheme: dark) {
-  /* Override theme color for dark mode */
-  meta[name="theme-color"] {
-    content: #285E79;
-  }
+.hidden {
+  display: none;
 }
