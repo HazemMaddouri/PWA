@@ -8,7 +8,7 @@ body {
 }
 
 .install {
-  border: solid 1px #181818;
+  border: solid 1px rgba(255, 255, 255, 0.333);
   border-radius: 5px;
   padding: .5rem;
   background-color: lightpink;
