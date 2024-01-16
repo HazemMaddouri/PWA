@@ -79,3 +79,10 @@ self.addEventListener('fetch', e => {
   }
   updateCache(requestUrl)
 })
+
+//add push notifications
+self.addEventListener('push', e => {
+  if(!(self.Notification && self.Notification.permission === 'granted')) {
+    return
+  }
+})
