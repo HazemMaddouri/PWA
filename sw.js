@@ -9,3 +9,11 @@ self.addEventListener('activate', e => {
   console.log('Activate SW version :' + version);
   return self.clients.claim()
 })
+
+//simple fetch general
+self.addEventListener('fetch', e => {
+  const requestUrl = new URL(
+    e.request.url
+  )
+  console.log(requestUrl);
+})
