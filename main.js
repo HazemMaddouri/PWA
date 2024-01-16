@@ -1,4 +1,5 @@
 const installBtn = document.querySelector('.install')
+const beerList = document.querySelector('.beers')
 
 let deferredPrompt = null
 
@@ -24,9 +25,9 @@ installBtn.addEventListener('click', e => {
 })
 
 //affichage bieres
-const beersList = document.querySelector('.beers')
+if(beerList) {
 
-fetch('https://api.punkapi.com/v2/beers?per_page=10')
+fetch('https://api.punkapi.com/v2/beers/random')
 .then(resp => resp.json())
 .then(resp => {
   resp.forEach((beer) => {
@@ -34,6 +35,7 @@ fetch('https://api.punkapi.com/v2/beers?per_page=10')
     template = `
     <li id="${beer.id}">${beer.name}</li>
     `
-  beersList.innerHTML += template
+  beerList.innerHTML += template
   })
 })
+}
